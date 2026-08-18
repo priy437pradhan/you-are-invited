@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Sagan &amp; Ring Ceremony — Akshit &amp; Rajveer</title>
+<meta name="description" content="Sagan &amp; Ring Ceremony • Akshit &amp; Rajveer • Sunday, 6 September 2026 • The Tivoli, Oak Wood Hall-1, Chattarpur, New Delhi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sagan &amp; Ring Ceremony — Akshit &amp; Rajveer">
+<meta property="og:description" content="Sunday, 6 September 2026 • 7:00 PM • The Tivoli, Chattarpur, New Delhi">
+<meta property="og:image" content="images/image1.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500;1,600&family=Jost:wght@300;400;500&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --emerald:#1a1a1a;
+  --emerald-2:#262626;
+  --emerald-ink:#0d0d0d;
+  --ivory:#fbf5ea;
+  --ivory-2:#f2e8d6;
+  --rose:#8c1c1c;
+  --gold:#b0212b;
+  --gold-lt:#d9434d;
+  --gold-soft:#f0c9c9;
+  --ink:#22302b;
+  --ink-soft:#5d6d66;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html.lock,body.lock{overflow:hidden;height:100%}
+body{background:var(--emerald-ink);color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+.page{position:relative;max-width:470px;margin:0 auto;background:var(--ivory);overflow:hidden;box-shadow:0 0 70px rgba(0,0,0,.75)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* kundan band — small black + red lozenges */
+.kundan{height:12px;background:var(--emerald);
+  background-image:radial-gradient(circle at 6px 6px, var(--gold-lt) 0 2px, transparent 2.5px),
+                   radial-gradient(circle at 18px 6px, rgba(140,28,28,.9) 0 2px, transparent 2.5px);
+  background-size:24px 12px}
+
+/* ================= HERO — THE RING BOX ================= */
+.hero{position:relative;width:100%;height:100vh;height:100dvh;background:#0d0d0d;overflow:hidden}
+.gpu{position:absolute;inset:0;z-index:1;transform:translate3d(0,0,0);will-change:transform;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+#bgVideo{width:100%;height:100%;object-fit:cover;background:#0d0d0d;display:block}
+.hero-fallback{position:absolute;inset:0;z-index:0;background:url('images/image1.jpeg') center/cover no-repeat;
+  transform:scale(1.06);animation:driftIn 20s ease-in-out infinite alternate}
+@keyframes driftIn{from{transform:scale(1.06) translateY(0)}to{transform:scale(1.16) translateY(-12px)}}
+.hero-shade{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity 1.4s ease;
+  background:linear-gradient(180deg,rgba(13,13,13,.62),rgba(13,13,13,.12) 44%,rgba(13,13,13,.9))}
+.hero.opened .hero-shade{opacity:1}
+
+/* the two lid halves */
+.boxlid{position:absolute;inset:0;z-index:12}
+.lid{position:absolute;left:0;width:100%;height:50.2%;background:var(--emerald);
+  background-image:radial-gradient(ellipse at 50% 120%,rgba(38,38,38,.95),transparent 70%),
+                   repeating-linear-gradient(115deg,rgba(255,255,255,.028) 0 2px,transparent 2px 6px);
+  transition:transform 1.5s cubic-bezier(.66,0,.16,1)}
+.lid.top{top:0;box-shadow:inset 0 -1px 0 rgba(217,67,77,.55)}
+.lid.bot{bottom:0;box-shadow:inset 0 1px 0 rgba(217,67,77,.55)}
+.lid:before{content:"";position:absolute;left:16px;right:16px;border:1px solid rgba(217,67,77,.4);pointer-events:none}
+.lid.top:before{top:16px;bottom:0;border-bottom:none}
+.lid.bot:before{bottom:16px;top:0;border-top:none}
+.engrave{position:absolute;left:0;width:100%;text-align:center;color:var(--gold-lt);
+  font-family:'Italiana',serif;font-size:11px;letter-spacing:6px;text-transform:uppercase}
+.lid.top .engrave{top:56px}
+.lid.bot .engrave{bottom:52px;font-size:10px;letter-spacing:4px;color:rgba(240,201,201,.72)}
+.boxlid.open .lid.top{transform:translateY(-101%)}
+.boxlid.open .lid.bot{transform:translateY(101%)}
+
+/* the clasp you tap: two interlocking rings */
+.clasp{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:14;
+  display:flex;flex-direction:column;align-items:center;gap:16px;background:none;border:0;cursor:pointer;
+  transition:opacity .7s ease,transform .9s cubic-bezier(.66,0,.16,1)}
+.clasp.gone{opacity:0;transform:translate(-50%,-50%) scale(1.25);pointer-events:none}
+.rings{width:112px;height:74px;display:block}
+.rings circle{fill:none;stroke:var(--gold-lt);stroke-width:1.6}
+.rings .r1{animation:breathe 3.4s ease-in-out infinite}
+.rings .r2{animation:breathe 3.4s ease-in-out .5s infinite}
+@keyframes breathe{0%,100%{opacity:.55}50%{opacity:1}}
+.clasp-label{font-family:'Italiana',serif;font-size:9.5px;letter-spacing:5px;text-transform:uppercase;color:var(--gold-soft)}
+
+/* what the open box reveals */
+.reveal-layer{position:absolute;top:0;left:0;width:100%;height:100%;z-index:6;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;padding:0 26px;
+  opacity:0;transform:scale(.94);transition:opacity 1.8s ease,transform 2s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.reveal-layer.active{opacity:1;transform:none;pointer-events:auto}
+.dev{font-family:'Tiro Devanagari Hindi',serif;font-size:17px;color:var(--gold-lt);letter-spacing:1px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+.occasion{font-family:'Italiana',serif;font-size:12px;letter-spacing:7px;text-transform:uppercase;color:var(--gold-soft);
+  border:1px solid rgba(217,67,77,.6);border-radius:2px;padding:9px 18px;background:rgba(13,13,13,.5)}
+.names{font-family:'Cormorant Garamond',serif;font-weight:500;font-style:italic;font-size:50px;line-height:1.02;
+  color:#fff8ea;margin:14px 0 4px;text-shadow:0 2px 6px rgba(0,0,0,.85),0 10px 30px rgba(0,0,0,.7)}
+.names .amp{display:block;font-family:'Italiana',serif;font-style:normal;font-size:17px;letter-spacing:5px;
+  color:var(--rose);text-transform:uppercase;margin:7px 0}
+.when{font-family:'Jost',sans-serif;font-weight:400;font-size:12px;letter-spacing:3.4px;text-transform:uppercase;color:#efdfc4;
+  padding-top:10px;border-top:1px solid rgba(217,67,77,.45)}
+.where{font-size:11.5px;letter-spacing:1.6px;color:rgba(240,201,201,.82)}
+
+.cue{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));z-index:9;
+  display:flex;flex-direction:column;align-items:center;gap:4px;background:rgba(13,13,13,.62);
+  border:1px solid rgba(217,67,77,.6);border-radius:2px;padding:10px 20px 8px;color:var(--gold-soft);cursor:pointer;
+  opacity:0;pointer-events:none;transform:translateX(-50%) translateY(16px);transition:opacity 1s ease,transform 1s cubic-bezier(.16,1,.3,1)}
+.cue.show{opacity:1;pointer-events:auto;transform:translateX(-50%)}
+.cue span{font-family:'Italiana',serif;font-size:8.5px;letter-spacing:4px;text-transform:uppercase}
+.cue i{font-style:normal;font-size:15px;line-height:.8;color:var(--gold-lt);animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
+/* ================= sections ================= */
+.sec{padding:56px 26px;text-align:center;position:relative}
+.eyebrow{font-family:'Italiana',serif;font-size:9.5px;letter-spacing:6px;text-transform:uppercase;color:var(--rose);margin-bottom:14px}
+.sec h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-style:italic;font-size:30px;color:var(--emerald)}
+.lead{max-width:360px;margin:16px auto 0;font-size:13.5px;line-height:1.85;color:var(--ink-soft)}
+.rule{width:1px;height:34px;background:linear-gradient(180deg,transparent,var(--gold),transparent);margin:22px auto 0}
+.dev-ink{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--rose);line-height:1.7}
+
+/* countdown — four thin rings */
+.rings-row{display:flex;justify-content:center;gap:6px;margin-top:26px}
+.cd{width:76px;text-align:center}
+.cd svg{width:72px;height:72px;transform:rotate(-90deg)}
+.cd .track{fill:none;stroke:rgba(26,26,26,.13);stroke-width:2}
+.cd .prog{fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;transition:stroke-dashoffset .6s linear}
+.cd .val{position:relative;margin-top:-46px;font-family:'Italiana',serif;font-size:22px;color:var(--emerald)}
+.cd .unit{margin-top:20px;font-size:8px;letter-spacing:2.6px;text-transform:uppercase;color:var(--rose)}
+
+/* order of the evening — turn cards on a hairline spine */
+.flow{margin:28px auto 0;max-width:400px;text-align:left;position:relative;padding-left:30px}
+.flow:before{content:"";position:absolute;left:7px;top:12px;bottom:12px;width:1px;background:linear-gradient(180deg,transparent,rgba(176,33,43,.6),transparent)}
+.step{position:relative;margin-bottom:14px}
+.step:before{content:"";position:absolute;left:-27px;top:26px;width:9px;height:9px;background:var(--ivory);
+  border:1px solid var(--gold);transform:rotate(45deg)}
+.turn{perspective:1000px;cursor:pointer;background:none;border:0;width:100%;padding:0;text-align:left;font:inherit;color:inherit}
+.turn-in{position:relative;transform-style:preserve-3d;transition:transform .75s cubic-bezier(.4,.1,.2,1);min-height:92px}
+.turn.on .turn-in{transform:rotateY(180deg)}
+.face{border:1px solid rgba(176,33,43,.4);border-radius:3px;padding:16px 18px;background:#fffbf2;
+  -webkit-backface-visibility:hidden;backface-visibility:hidden;min-height:92px;display:flex;flex-direction:column;justify-content:center}
+.face.back{position:absolute;inset:0;transform:rotateY(180deg);background:var(--emerald);border-color:rgba(217,67,77,.5)}
+.t-time{font-family:'Italiana',serif;font-size:10px;letter-spacing:4px;color:var(--rose)}
+.t-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--emerald);margin-top:4px}
+.t-turn{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--ink-soft);margin-top:9px}
+.face.back .t-dev{font-family:'Tiro Devanagari Hindi',serif;font-size:13px;color:var(--gold-lt)}
+.face.back p{font-size:12.5px;line-height:1.7;color:#efe3cd;margin-top:7px}
+
+/* venue */
+.venue{background:var(--emerald);color:var(--gold-soft)}
+.venue .eyebrow{color:var(--rose)}
+.venue h2{color:#fff8ea}
+.vcard{max-width:380px;margin:22px auto 0;border:1px solid rgba(217,67,77,.4);border-radius:3px;padding:24px 20px;background:rgba(255,255,255,.035)}
+.vhall{font-family:'Italiana',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold-lt)}
+.vname{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:#fff8ea;margin-top:6px}
+.vaddr{font-size:12.5px;line-height:1.8;color:rgba(240,201,201,.85);margin-top:10px}
+.btns{margin-top:20px;display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;font-family:'Italiana',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;
+  text-decoration:none;padding:11px 20px;border-radius:2px;cursor:pointer;border:1px solid var(--gold-lt);
+  background:var(--gold-lt);color:#fff8ea;font-weight:400}
+.btn.ghost{background:transparent;color:var(--gold-lt)}
+
+/* families */
+.fam{display:flex;max-width:400px;margin:24px auto 0;border:1px solid rgba(176,33,43,.4);border-radius:3px;background:#fffbf2;overflow:hidden}
+.fam>div{flex:1;padding:24px 14px}
+.fam>div+div{border-left:1px solid rgba(176,33,43,.35)}
+.role{font-family:'Italiana',serif;font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--rose)}
+.fam h3{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:24px;color:var(--emerald);margin-top:4px}
+.lbl{font-family:'Italiana',serif;font-size:8px;letter-spacing:2.6px;text-transform:uppercase;color:var(--gold);margin-top:16px}
+.fam p{font-size:12px;line-height:1.65;color:var(--ink-soft);margin-top:4px}
+
+/* attire */
+.swatches{display:flex;justify-content:center;gap:14px;margin-top:22px}
+.sw{text-align:center}
+.sw i{display:block;width:38px;height:38px;border-radius:50%;border:1px solid rgba(176,33,43,.5)}
+.sw small{display:block;margin-top:8px;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-soft)}
+
+/* gallery rail */
+.rail{margin-top:24px;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;padding:0 26px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.railwrap{margin:0 -26px}
+.shot{flex:0 0 78%;scroll-snap-align:center;aspect-ratio:3/4;border-radius:3px;overflow:hidden;border:1px solid rgba(176,33,43,.4)}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:16px}
+.dot{width:5px;height:5px;border-radius:50%;background:rgba(26,26,26,.2)}
+.dot.on{background:var(--gold);transform:scale(1.4)}
+
+/* rsvp */
+.rsvp a.row{display:flex;justify-content:space-between;align-items:center;text-decoration:none;
+  border-bottom:1px solid rgba(176,33,43,.35);padding:15px 4px;font-size:13.5px;color:var(--ink)}
+.rsvp .wrap{max-width:340px;margin:18px auto 0}
+.rsvp a.row span:last-child{font-family:'Italiana',serif;font-size:12px;letter-spacing:1.4px;color:var(--emerald)}
+
+footer{text-align:center;padding:48px 26px 56px;background:var(--emerald-ink);color:#e9dcc2}
+footer .fdev{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--gold-lt)}
+footer .fnames{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:#fff8ea;margin-top:12px}
+footer .fmeta{font-family:'Italiana',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold-lt);margin-top:10px}
+footer p{font-size:12.5px;line-height:1.8;color:#cbbfa6;margin-top:18px;font-style:italic}
+
+/* music */
+.music-btn{position:fixed;top:14px;right:14px;z-index:60;width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--gold-lt);background:rgba(13,13,13,.62);color:var(--gold-soft);cursor:pointer;font-size:15px}
+.music-btn.playing{animation:mp 2s ease-in-out infinite}
+@keyframes mp{0%,100%{box-shadow:0 4px 14px rgba(0,0,0,.35)}50%{box-shadow:0 0 0 6px rgba(217,67,77,.22)}}
+
+/* rising flecks */
+.flecks{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
+.fleck{position:absolute;bottom:-30px;color:var(--gold-lt);will-change:transform,opacity}
+@keyframes rise{0%{transform:translate(0,0) rotate(0);opacity:0}12%{opacity:.9}100%{transform:translate(var(--dx),-106vh) rotate(220deg);opacity:0}}
+
+/* reveals */
+.up{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.up.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .up{opacity:1!important;transform:none!important}
+  .hero-fallback,.rings .r1,.rings .r2,.cue i{animation:none}
+}
+</style>
+</head>
+<body>
+
+<button class="music-btn" id="musicBtn" aria-label="Play or pause music">♪</button>
+<audio id="bgMusic" loop preload="none" src="audio/music.mpeg"></audio>
+<div class="flecks" id="flecks" aria-hidden="true"></div>
+
+<div class="page">
+  <div class="kundan"></div>
+
+  <!-- ============== HERO : THE RING BOX ============== -->
+  <section class="hero" id="hero">
+    <div class="hero-fallback" id="heroFallback"></div>
+    <div class="gpu">
+      <video id="bgVideo" playsinline webkit-playsinline muted preload="auto" poster="images/image1.jpeg">
+        <source src="video/envelope.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-shade"></div>
+
+    <div class="reveal-layer" id="revealLayer">
+      <div class="dev">॥ शुभ शगुन ॥</div>
+      <div class="occasion">Sagan &amp; Ring Ceremony</div>
+      <h1 class="names">Akshit<span class="amp">and</span>Rajveer</h1>
+      <div class="when">Sunday, 6 September 2026 · 7:00 PM</div>
+      <div class="where">The Tivoli, Chattarpur · New Delhi</div>
+    </div>
+
+    <div class="boxlid" id="boxlid">
+      <div class="lid top"><div class="engrave">Sagan &amp; Ring Ceremony</div></div>
+      <div class="lid bot"><div class="engrave">06 · 09 · 2026 — New Delhi</div></div>
+    </div>
+
+    <button class="clasp" id="clasp" aria-label="Open the invitation">
+      <svg class="rings" viewBox="0 0 112 74" aria-hidden="true">
+        <circle class="r1" cx="42" cy="37" r="23"></circle>
+        <circle class="r2" cx="70" cy="37" r="23"></circle>
+      </svg>
+      <span class="clasp-label">Tap to open the box</span>
+    </button>
+
+    <div class="cue" id="cue" role="button" tabindex="0">
+      <span>The evening</span><i>⌄</i>
+    </div>
+  </section>
+
+  <!-- ============== BLESSING ============== -->
+  <section class="sec up" id="afterHero">
+    <div class="eyebrow">Shubh Aarambh</div>
+    <p class="dev-ink">ॐ श्री गणेशाय नमः</p>
+    <p class="lead">Before the wedding week begins, both families meet to place the tilak, exchange
+      shagun and slip on the rings. It is a small evening with a big meaning — and it is not complete without you.</p>
+    <div class="rule"></div>
+  </section>
+
+  <!-- ============== COUNTDOWN ============== -->
+  <section class="sec up" style="background:linear-gradient(180deg,#fffbf2,var(--ivory))">
+    <div class="eyebrow">Until the rings</div>
+    <h2>6 September, 7:00 PM</h2>
+    <div class="rings-row">
+      <div class="cd">
+        <svg viewBox="0 0 72 72"><circle class="track" cx="36" cy="36" r="27"></circle><circle class="prog" id="p-d" cx="36" cy="36" r="27"></circle></svg>
+        <div class="val" id="cd-d">--</div><div class="unit">Days</div>
+      </div>
+      <div class="cd">
+        <svg viewBox="0 0 72 72"><circle class="track" cx="36" cy="36" r="27"></circle><circle class="prog" id="p-h" cx="36" cy="36" r="27"></circle></svg>
+        <div class="val" id="cd-h">--</div><div class="unit">Hours</div>
+      </div>
+      <div class="cd">
+        <svg viewBox="0 0 72 72"><circle class="track" cx="36" cy="36" r="27"></circle><circle class="prog" id="p-m" cx="36" cy="36" r="27"></circle></svg>
+        <div class="val" id="cd-m">--</div><div class="unit">Mins</div>
+      </div>
+      <div class="cd">
+        <svg viewBox="0 0 72 72"><circle class="track" cx="36" cy="36" r="27"></circle><circle class="prog" id="p-s" cx="36" cy="36" r="27"></circle></svg>
+        <div class="val" id="cd-s">--</div><div class="unit">Secs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ORDER OF THE EVENING ============== -->
+  <section class="sec">
+    <div class="eyebrow up">In order</div>
+    <h2 class="up">How the evening runs</h2>
+    <p class="lead up">Tap a card to see what happens at that hour.</p>
+
+    <div class="flow">
+      <div class="step up">
+        <button class="turn" data-turn>
+          <div class="turn-in">
+            <div class="face">
+              <div class="t-time">6:30 PM</div>
+              <div class="t-name">Welcome &amp; tea</div>
+              <div class="t-turn">Tap to read</div>
+            </div>
+            <div class="face back">
+              <div class="t-dev">स्वागत</div>
+              <p>Guests arrive at Oak Wood Hall-1. Tea, chaat and the first round of photographs.</p>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <div class="step up">
+        <button class="turn" data-turn>
+          <div class="turn-in">
+            <div class="face">
+              <div class="t-time">7:00 PM</div>
+              <div class="t-name">Milni</div>
+              <div class="t-turn">Tap to read</div>
+            </div>
+            <div class="face back">
+              <div class="t-dev">मिलनी</div>
+              <p>The two families greet each other — garlands, embraces and a great deal of noise.</p>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <div class="step up">
+        <button class="turn" data-turn>
+          <div class="turn-in">
+            <div class="face">
+              <div class="t-time">7:45 PM</div>
+              <div class="t-name">Sagan &amp; tilak</div>
+              <div class="t-turn">Tap to read</div>
+            </div>
+            <div class="face back">
+              <div class="t-dev">शगुन · टीका</div>
+              <p>Elders place the tilak and offer shagun, blessing the match on both sides.</p>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <div class="step up">
+        <button class="turn" data-turn>
+          <div class="turn-in">
+            <div class="face">
+              <div class="t-time">8:15 PM</div>
+              <div class="t-name">The rings</div>
+              <div class="t-turn">Tap to read</div>
+            </div>
+            <div class="face back">
+              <div class="t-dev">अंगूठी</div>
+              <p>Akshit and Rajveer exchange rings. Stay close to the stage — this part is quick.</p>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <div class="step up">
+        <button class="turn" data-turn>
+          <div class="turn-in">
+            <div class="face">
+              <div class="t-time">8:45 PM</div>
+              <div class="t-name">Dinner &amp; dhol</div>
+              <div class="t-turn">Tap to read</div>
+            </div>
+            <div class="face back">
+              <div class="t-dev">भोजन</div>
+              <p>Dinner opens and the dhol starts. No one is excused from the dance floor.</p>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== VENUE ============== -->
+  <section class="sec venue up">
+    <div class="eyebrow">The address</div>
+    <h2>Where to come</h2>
+    <div class="vcard">
+      <div class="vhall">Oak Wood Hall-1</div>
+      <div class="vname">The Tivoli</div>
+      <p class="vaddr">Chattarpur Mandir Road, Block-A,<br>Chattarpur Enclave, Mehrauli,<br>New Delhi</p>
+      <div class="btns">
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Tivoli+Chattarpur+New+Delhi">Open in Maps</a>
+        <button class="btn ghost ics-btn"
+          data-title="Sagan &amp; Ring Ceremony — Akshit &amp; Rajveer"
+          data-start="20260906T133000Z" data-end="20260906T173000Z"
+          data-loc="The Tivoli, Oak Wood Hall-1, Chattarpur, New Delhi"
+          data-desc="Sagan and Ring Ceremony of Akshit and Rajveer">Add to calendar</button>
+      </div>
+      <p class="vaddr" style="margin-top:18px;font-size:11px;letter-spacing:1px">Valet parking at the main gate</p>
+    </div>
+  </section>
+
+  <!-- ============== FAMILIES ============== -->
+  <section class="sec up">
+    <div class="eyebrow">With blessings of</div>
+    <h2>Our families</h2>
+    <div class="fam">
+      <div>
+        <div class="role">The Groom</div>
+        <h3>Akshit</h3>
+        <div class="lbl">Parents</div>
+        <p>Mr. Praveen Gulati<br>Mrs. Neeru Bala</p>
+        <div class="lbl">Grandparents</div>
+        <p>Late Sh. Shyam Sunder<br>Late Smt. Sarla Devi</p>
+      </div>
+      <div>
+        <div class="role">The Bride</div>
+        <h3>Rajveer</h3>
+        <div class="lbl">Parents</div>
+        <p>Mrs. Gurmeet Kaur<br>Mr. Gulshan Arora</p>
+        <div class="lbl">Grandparents</div>
+        <p>Late Smt. Shakuntla Rani<br>Late Sh. Rajinder Kumar</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ATTIRE ============== -->
+  <section class="sec up" style="background:linear-gradient(180deg,var(--ivory),#f3e9d8)">
+    <div class="eyebrow">What to wear</div>
+    <h2>Indian festive</h2>
+    <div class="swatches">
+      <div class="sw"><i style="background:#fbf5ea"></i><small>Ivory</small></div>
+      <div class="sw"><i style="background:#e8b8b8"></i><small>Blush</small></div>
+      <div class="sw"><i style="background:#1a1a1a"></i><small>Black</small></div>
+      <div class="sw"><i style="background:#b0212b"></i><small>Red</small></div>
+    </div>
+    <p class="lead">The hall photographs beautifully in these shades — and the couple is in ivory and black.</p>
+  </section>
+
+  <!-- ============== GALLERY RAIL ============== -->
+  <section class="sec up">
+    <div class="eyebrow">Moments</div>
+    <h2>Akshit &amp; Rajveer</h2>
+    <div class="railwrap">
+      <div class="rail" id="rail">
+        <div class="shot"><img src="images/image1.jpeg" alt="Akshit and Rajveer" loading="lazy"></div>
+        <div class="shot"><img src="images/image2.jpeg" alt="Akshit and Rajveer" loading="lazy"></div>
+        <div class="shot"><img src="images/image3.jpeg" alt="Akshit and Rajveer" loading="lazy"></div>
+        <div class="shot"><img src="images/image4.jpeg" alt="Akshit and Rajveer" loading="lazy"></div>
+        <div class="shot"><img src="images/image5.jpeg" alt="Akshit and Rajveer" loading="lazy"></div>
+        <div class="shot"><img src="images/image6.jpeg" alt="Akshit and Rajveer" loading="lazy"></div>
+        <div class="shot"><img src="images/image7.jpeg" alt="Akshit and Rajveer" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============== RSVP ============== -->
+  <section class="sec rsvp up" style="background:linear-gradient(180deg,#fffbf2,var(--ivory-2))">
+    <div class="eyebrow">RSVP</div>
+    <h2>Gulati family</h2>
+    <p class="lead">Call or message either of us so we can keep a seat for you.</p>
+    <div class="wrap">
+      <a class="row" href="tel:+919911260961"><span>Ramesh Gulati</span><span>99112 60961</span></a>
+      <a class="row" href="tel:+919582758769"><span>Ankit Gulati</span><span>95827 58769</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fdev">॥ शुभ शगुन ॥</div>
+    <div class="fnames">Akshit &amp; Rajveer</div>
+    <div class="fmeta">6 September 2026 · The Tivoli, New Delhi</div>
+    <p>Come early, stay late, and bless them<br>as they say yes to the years ahead.</p>
+  </footer>
+  <div class="kundan"></div>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* ---------- HERO : ring box ---------- */
+  var hero = document.getElementById('hero'),
+      video = document.getElementById('bgVideo'),
+      fallback = document.getElementById('heroFallback'),
+      lid = document.getElementById('boxlid'),
+      clasp = document.getElementById('clasp'),
+      layer = document.getElementById('revealLayer'),
+      cue = document.getElementById('cue'),
+      opened = false, hasVideo = true;
+
+  video.addEventListener('error', function(){ hasVideo = false; video.style.display = 'none'; }, true);
+  video.addEventListener('loadeddata', function(){ fallback.style.display = 'none'; });
+
+  var DETAILS_AT = 3200;  /* ms into the video: the card is out */
+  var CUE_AT     = 5200;  /* ms: invite the scroll */
+
+  function showDetails(){
+    hero.className = 'hero opened';
+    layer.className = 'reveal-layer active';
+    startFlecks();
+    setTimeout(function(){ cue.className = 'cue show'; }, CUE_AT - DETAILS_AT);
+  }
+
+  function openBox(){
+    if(opened) return; opened = true;
+    clasp.className = 'clasp gone';
+    lid.className = 'boxlid open';
+    document.documentElement.className = document.documentElement.className.replace(' lock','');
+    document.body.className = document.body.className.replace('lock','');
+    tryMusic();
+    if(hasVideo){
+      var p = video.play();
+      if(p && p['catch']) p['catch'](function(){ hasVideo = false; });
+      var fired = false;
+      video.addEventListener('timeupdate', function onT(){
+        if(!fired && video.currentTime >= DETAILS_AT/1000){
+          fired = true; video.removeEventListener('timeupdate', onT); showDetails();
+        }
+      });
+      setTimeout(function(){ if(!fired){ fired = true; showDetails(); } }, DETAILS_AT + 600);
+      video.addEventListener('ended', function(){ video.pause(); });
+    } else {
+      setTimeout(showDetails, 900);
+    }
+  }
+  document.documentElement.className += ' lock';
+  document.body.className += 'lock';
+  clasp.addEventListener('click', openBox);
+  function goDown(){ var t = document.getElementById('afterHero'); if(t) t.scrollIntoView({behavior:'smooth'}); }
+  cue.addEventListener('click', goDown);
+  cue.addEventListener('keydown', function(e){ if(e.keyCode === 13 || e.keyCode === 32){ e.preventDefault(); goDown(); } });
+
+  /* ---------- music (audio/music.mpeg) ---------- */
+  var music = document.getElementById('bgMusic'), mBtn = document.getElementById('musicBtn'), musicOK = true;
+  music.addEventListener('error', function(){ musicOK = false; mBtn.style.display = 'none'; });
+  function tryMusic(){
+    if(!musicOK) return;
+    music.volume = 0.55;
+    var p = music.play(); if(p && p['catch']) p['catch'](function(){});
+    mBtn.className = 'music-btn playing';
+  }
+  mBtn.addEventListener('click', function(){
+    if(!musicOK) return;
+    if(music.paused){ music.play(); mBtn.className = 'music-btn playing'; mBtn.textContent = '♪'; }
+    else { music.pause(); mBtn.className = 'music-btn'; mBtn.textContent = '♪̸'; }
+  });
+
+  /* ---------- countdown to the sagan ---------- */
+  var target = new Date('2026-09-06T19:00:00+05:30').getTime();
+  var C = 2 * Math.PI * 27;
+  var arcs = { d: document.getElementById('p-d'), h: document.getElementById('p-h'),
+               m: document.getElementById('p-m'), s: document.getElementById('p-s') };
+  for(var k in arcs){ if(arcs[k]){ arcs[k].setAttribute('stroke-dasharray', C); arcs[k].setAttribute('stroke-dashoffset', C); } }
+  function arc(el, frac){ if(el) el.setAttribute('stroke-dashoffset', C - C * Math.max(0, Math.min(1, frac))); }
+  function pad(n){ return ('0' + n).slice(-2); }
+  function tick(){
+    var d = target - Date.now(); if(d < 0) d = 0;
+    var days = Math.floor(d/86400000), hrs = Math.floor(d%86400000/3600000),
+        min = Math.floor(d%3600000/60000), sec = Math.floor(d%60000/1000);
+    document.getElementById('cd-d').textContent = days;
+    document.getElementById('cd-h').textContent = pad(hrs);
+    document.getElementById('cd-m').textContent = pad(min);
+    document.getElementById('cd-s').textContent = pad(sec);
+    arc(arcs.d, (days % 30)/30); arc(arcs.h, hrs/24); arc(arcs.m, min/60); arc(arcs.s, sec/60);
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---------- turn cards ---------- */
+  var turns = document.querySelectorAll('[data-turn]');
+  for(var t = 0; t < turns.length; t++){
+    turns[t].addEventListener('click', function(){
+      this.className = this.className.indexOf('on') > -1 ? 'turn' : 'turn on';
+    });
+  }
+
+  /* ---------- add to calendar (.ics) ---------- */
+  function esc(s){ return String(s || '').replace(/[\\;,]/g, function(m){ return '\\' + m; }).replace(/\n/g, '\\n'); }
+  function stamp(){ return new Date().toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z'; }
+  document.addEventListener('click', function(e){
+    var b = e.target;
+    while(b && b !== document && String(b.className || '').indexOf('ics-btn') === -1) b = b.parentNode;
+    if(!b || b === document) return;
+    var ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Akshit-Rajveer//Sagan//EN','BEGIN:VEVENT',
+      'UID:' + Date.now() + '@sagan','DTSTAMP:' + stamp(),
+      'DTSTART:' + b.getAttribute('data-start'),'DTEND:' + b.getAttribute('data-end'),
+      'SUMMARY:' + esc(b.getAttribute('data-title')),
+      'LOCATION:' + esc(b.getAttribute('data-loc')),
+      'DESCRIPTION:' + esc(b.getAttribute('data-desc')),
+      'END:VEVENT','END:VCALENDAR'].join('\r\n');
+    var name = 'sagan-akshit-rajveer.ics';
+    try{
+      var url = URL.createObjectURL(new Blob([ics], {type:'text/calendar;charset=utf-8'}));
+      var a = document.createElement('a'); a.href = url; a.download = name;
+      document.body.appendChild(a); a.click();
+      setTimeout(function(){ document.body.removeChild(a); URL.revokeObjectURL(url); }, 400);
+    }catch(err){
+      window.location.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+    }
+  });
+
+  /* ---------- gallery rail dots ---------- */
+  var rail = document.getElementById('rail'), dots = document.getElementById('dots');
+  if(rail && dots){
+    var shots = rail.querySelectorAll('.shot');
+    for(var s = 0; s < shots.length; s++){
+      var dt = document.createElement('i');
+      dt.className = 'dot' + (s === 0 ? ' on' : '');
+      dots.appendChild(dt);
+    }
+    var kids = dots.querySelectorAll('.dot'), raf;
+    rail.addEventListener('scroll', function(){
+      if(raf) return;
+      raf = setTimeout(function(){
+        raf = null;
+        var w = shots[0].getBoundingClientRect().width + 12;
+        var i = Math.round(rail.scrollLeft / w);
+        for(var j = 0; j < kids.length; j++) kids[j].className = 'dot' + (j === i ? ' on' : '');
+      }, 90);
+    });
+  }
+
+  /* ---------- scroll reveal ---------- */
+  var ups = document.querySelectorAll('.up');
+  if(window.IntersectionObserver){
+    var io = new IntersectionObserver(function(en){
+      for(var i = 0; i < en.length; i++){
+        if(en[i].isIntersecting){ en[i].target.className += ' in'; io.unobserve(en[i].target); }
+      }
+    }, {threshold:.14});
+    for(var u = 0; u < ups.length; u++) io.observe(ups[u]);
+  } else {
+    for(var u2 = 0; u2 < ups.length; u2++) ups[u2].className += ' in';
+  }
+
+  /* ---------- rising flecks ---------- */
+  var fl = document.getElementById('flecks'), glyphs = ['✦','·','✧','❁'], on = false, live = 0, MAX = 14;
+  function spawn(){
+    if(!on || live >= MAX) return;
+    var p = document.createElement('span');
+    p.className = 'fleck';
+    p.textContent = glyphs[Math.floor(Math.random()*glyphs.length)];
+    p.style.left = (Math.random()*100) + 'vw';
+    p.style.fontSize = (9 + Math.random()*13) + 'px';
+    p.style.setProperty('--dx', (Math.random()*120 - 60) + 'px');
+    p.style.animation = 'rise ' + (8 + Math.random()*5) + 's linear forwards';
+    fl.appendChild(p); live++;
+    p.addEventListener('animationend', function(){ this.parentNode && this.parentNode.removeChild(this); live--; });
+  }
+  function startFlecks(){
+    if(reduce || on) return; on = true;
+    for(var i = 0; i < 8; i++) setTimeout(spawn, i*220);
+    setInterval(spawn, 900);
+  }
+})();
+</script>
+</body>
+</html>
