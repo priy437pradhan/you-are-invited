@@ -25,6 +25,7 @@
   --gold-lt:#d9434d;
   --gold-dark:#e9737b;      /* red that actually reads on the black panels */
   --gold-soft:#f7dcdc;
+  --champagne:#f7e6d0;
   --ink:#1e2a25;
   --ink-soft:#495852;
   --sh-dark:0 1px 3px rgba(0,0,0,.85),0 6px 18px rgba(0,0,0,.6);
@@ -65,10 +66,12 @@ a{color:inherit}
 .lid:before{content:"";position:absolute;left:16px;right:16px;border:1px solid rgba(217,67,77,.4);pointer-events:none}
 .lid.top:before{top:16px;bottom:0;border-bottom:none}
 .lid.bot:before{bottom:16px;top:0;border-top:none}
-.engrave{position:absolute;left:0;width:100%;text-align:center;color:var(--gold-dark);
-  font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:4px;text-transform:uppercase}
-.lid.top .engrave{top:56px}
-.lid.bot .engrave{bottom:52px;font-size:11px;letter-spacing:3px;color:#f0bcbc}
+.engrave{position:absolute;left:0;width:100%;text-align:center;color:var(--champagne);
+  font-family:'Cormorant Garamond',serif;font-weight:600;font-size:17px;letter-spacing:5px;text-transform:uppercase;
+  text-shadow:0 1px 4px rgba(0,0,0,.7)}
+.lid.top .engrave{top:54px}
+.lid.bot .engrave{bottom:50px;font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:3px;
+  color:rgba(247,230,208,.6);text-shadow:none}
 .boxlid.open .lid.top{transform:translateY(-101%)}
 .boxlid.open .lid.bot{transform:translateY(101%)}
 
@@ -77,11 +80,14 @@ a{color:inherit}
   display:flex;flex-direction:column;align-items:center;gap:16px;background:none;border:0;cursor:pointer;
   transition:opacity .7s ease,transform .9s cubic-bezier(.66,0,.16,1)}
 .clasp.gone{opacity:0;transform:translate(-50%,-50%) scale(1.25);pointer-events:none}
-.rings{width:112px;height:74px;display:block}
-.rings circle{fill:none;stroke:var(--gold-lt);stroke-width:2}
-.rings .r1{animation:breathe 3.4s ease-in-out infinite}
-.rings .r2{animation:breathe 3.4s ease-in-out .5s infinite}
-@keyframes breathe{0%,100%{opacity:.6}50%{opacity:1}}
+.rings{width:132px;height:92px;display:block;overflow:visible}
+.rings .band{fill:none;stroke:url(#bandGrad);stroke-width:6.5}
+.rings .inner{fill:none;stroke:rgba(0,0,0,.42);stroke-width:1.1}
+.rings .glint{fill:none;stroke:rgba(255,255,255,.85);stroke-width:1.6;stroke-linecap:round;
+  animation:glint 3.6s ease-in-out infinite}
+.rings .stone{animation:sparkle 2.8s ease-in-out infinite}
+@keyframes glint{0%,100%{opacity:.15}45%{opacity:.9}}
+@keyframes sparkle{0%,100%{opacity:.72}50%{opacity:1}}
 .clasp-label{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:3.4px;text-transform:uppercase;color:#fbe6e6;text-shadow:var(--sh-dark)}
 
 /* what the open box reveals */
@@ -94,13 +100,13 @@ a{color:inherit}
 .reveal-layer>*{position:relative;z-index:1}
 .blessing-top{font-family:'Jost',sans-serif;font-weight:600;font-size:12px;letter-spacing:4.5px;text-transform:uppercase;
   color:#ffc9cc;text-shadow:var(--sh-dark)}
-.occasion{font-family:'Jost',sans-serif;font-weight:500;font-size:11.5px;letter-spacing:4.6px;text-transform:uppercase;color:#ffeaea;
+.occasion{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;letter-spacing:4.2px;text-transform:uppercase;color:var(--champagne);
   border:1px solid rgba(233,115,123,.8);border-radius:2px;padding:10px 18px;background:rgba(13,13,13,.68);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
   text-shadow:0 1px 3px rgba(0,0,0,.9)}
 .names{font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;font-size:50px;line-height:1.02;
   color:#fffaf0;margin:14px 0 4px;text-shadow:0 2px 8px rgba(0,0,0,.9),0 10px 34px rgba(0,0,0,.75)}
-.names .amp{display:block;font-family:'Italiana',serif;font-style:normal;font-size:18px;letter-spacing:5px;
-  color:#ff9ca2;text-transform:uppercase;margin:7px 0;text-shadow:var(--sh-dark)}
+.names .amp{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+  font-size:34px;letter-spacing:0;color:#ff9ca2;margin:2px 0;text-shadow:var(--sh-dark)}
 .when{font-family:'Jost',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:3px;text-transform:uppercase;color:#fff4e2;
   padding-top:11px;border-top:1px solid rgba(233,115,123,.6);text-shadow:var(--sh-dark)}
 .where{font-size:13px;font-weight:500;letter-spacing:1.5px;color:#f9e3e3;text-shadow:var(--sh-dark)}
@@ -243,7 +249,7 @@ footer p{font-size:13.5px;font-weight:400;line-height:1.75;color:#e3d8c2;margin-
     <div class="reveal-layer" id="revealLayer">
       <div class="blessing-top">Shubh Sagan</div>
       <div class="occasion">Sagan &amp; Ring Ceremony</div>
-      <h1 class="names">Akshit<span class="amp">and</span>Rajveer</h1>
+      <h1 class="names">Akshit<span class="amp">&amp;</span>Rajveer</h1>
       <div class="when">Sunday, 6 September 2026 · 7:00 PM</div>
       <div class="where">The Tivoli, Chattarpur · New Delhi</div>
     </div>
@@ -254,9 +260,43 @@ footer p{font-size:13.5px;font-weight:400;line-height:1.75;color:#e3d8c2;margin-
     </div>
 
     <button class="clasp" id="clasp" aria-label="Open the invitation">
-      <svg class="rings" viewBox="0 0 112 74" aria-hidden="true">
-        <circle class="r1" cx="42" cy="37" r="23"></circle>
-        <circle class="r2" cx="70" cy="37" r="23"></circle>
+      <svg class="rings" viewBox="0 0 132 92" aria-hidden="true">
+        <defs>
+          <linearGradient id="bandGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fbe6bd"></stop>
+            <stop offset=".32" stop-color="#e5b96d"></stop>
+            <stop offset=".58" stop-color="#b8813a"></stop>
+            <stop offset=".8" stop-color="#e8c079"></stop>
+            <stop offset="1" stop-color="#fbe6bd"></stop>
+          </linearGradient>
+          <linearGradient id="stoneGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff"></stop>
+            <stop offset=".55" stop-color="#ffe9ec"></stop>
+            <stop offset="1" stop-color="#ffb3ba"></stop>
+          </linearGradient>
+        </defs>
+
+        <!-- left band (goes under at top, over at bottom) -->
+        <circle class="band" cx="52" cy="58" r="22"></circle>
+        <circle class="inner" cx="52" cy="58" r="18.9"></circle>
+        <circle class="inner" cx="52" cy="58" r="25.1"></circle>
+
+        <!-- right band, lifted, carries the stone -->
+        <circle class="band" cx="84" cy="50" r="22"></circle>
+        <circle class="inner" cx="84" cy="50" r="18.9"></circle>
+        <circle class="inner" cx="84" cy="50" r="25.1"></circle>
+
+        <!-- left band crossing back over -> real interlock -->
+        <path class="band" d="M73.25 63.69 A22 22 0 0 1 68.35 72.72"></path>
+        <path class="inner" d="M70.5 62.2 A18.9 18.9 0 0 1 66.3 69.9"></path>
+
+        <!-- solitaire -->
+        <path class="stone" d="M84 21.5 L90.2 27 L84 35.5 L77.8 27 Z" fill="url(#stoneGrad)"></path>
+        <path class="stone" d="M77.8 27 L90.2 27 M84 21.5 L84 35.5" stroke="rgba(184,129,58,.5)" stroke-width=".8" fill="none"></path>
+        <path d="M80.4 30.4 L84 27.6 L87.6 30.4" stroke="url(#bandGrad)" stroke-width="1.6" fill="none"></path>
+
+        <path class="glint" d="M38 46 A22 22 0 0 1 47 40"></path>
+        <path class="glint" d="M96 62 A22 22 0 0 1 88 70" style="animation-delay:1.5s"></path>
       </svg>
       <span class="clasp-label">Tap to open the box</span>
     </button>
